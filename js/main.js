@@ -39,16 +39,18 @@
     ];
 
     let ul = document.createElement('ul');
-        ul.innerHTML = '<b>Список песен</b>'.toUpperCase();
+        ul.innerHTML = `<b>Список песен</b>`.toUpperCase();
         document.body.append(ul);
-
-    let li = [];
-    for (let i in playList) { 
-        li.push(`<li>${playList[i].author} - ${playList[i].song}</li>`);
-    }
-
-    li.innerHTML = li.sort().join('---');
-    ul.innerHTML = ul.innerHTML + li.innerHTML;
+        
+        let li = [];
+        for (let i in playList) { 
+            li.push(`<li>${playList[i].author} - ${playList[i].song}</li>`);
+        }
+        
+        li.innerHTML = li.sort().join('\u00A0');
+        ul.innerHTML = ul.innerHTML + li.innerHTML;
+       
+     
    
           
 
@@ -87,7 +89,7 @@ let divGreen = document.createElement('div');
     
     
 let button = document.createElement('button');
-   button.innerHTML = 'Нажми меня!';
+    button.innerHTML = 'Нажми меня!';
     document.body.appendChild(button);
 
 
