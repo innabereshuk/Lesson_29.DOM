@@ -90,22 +90,20 @@ let button = document.createElement('button');
    button.innerHTML = 'Нажми меня!';
     document.body.appendChild(button);
 
-// 2. Устанавливаю ограничение количества переходов тремя
+
+
+//  2. Создаю функцию, которая будет проверять смену цвета каждого куруга при каждом последовательном нажатии, при червертом нажатии начинает сначала  
 
 let time = 0;
 
-function functionary() {
+function colorChange() {
     time++;
-  
+
     if(time == 4){
         time = 1;
     }
-     colorChange();
-}
+    
 
-//  3. Создаю функцию, которая будет проверять смену цвета каждого куруга при каждом последовательном нажатии  
-
-function colorChange() {
     if (time == 1) {
         divRed.style.backgroundColor = 'green';
         divYellow.style.backgroundColor = 'red';
@@ -122,10 +120,10 @@ function colorChange() {
             }
         };
  
-// 4. Запускаю при нажатии на кнопку функцию, проверяющую сколько нажатий было сделано. При 4-ом нажатии сбрасывает на начало        
+// 3. Запускаю при нажатии на кнопку функцию, проверяющую сколько нажатий было сделано. При 4-ом нажатии сбрасывает на начало        
         
 button.addEventListener('click', () => {
-    functionary();
+    colorChange();
 });
     
       
