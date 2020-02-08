@@ -39,7 +39,7 @@
     ];
 
     let ul = document.createElement('ul');
-        ul.innerHTML = `<b>Список песен</b>`.toUpperCase();
+        ul.innerHTML = `<b style="color:brown;line-height:3;font-size:1.6rem;">Список песен</b>`.toUpperCase();
         document.body.append(ul);
         
         let li = [];
@@ -129,11 +129,4 @@ button.addEventListener('click', () => {
 });
     
       
-    
-
-
-
-    
-
-
 })();
